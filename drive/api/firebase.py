@@ -39,12 +39,12 @@ def get(token, **user_obj):
     print(all_data)
     return all_data
 
-def update(token, changes, drive_obj, user_obj):
+def update(token, changes, drive_obj, **user_obj):
     db.child(user_obj.username).child(drive_obj.id).update(changes, token)
     changes = db.child(user_obj.username).child(drive_obj.id)
     print(changes)
     return changes
 
-def delete(token, drive_obj, user_obj):
+def delete(token, drive_obj, **user_obj):
     db.child(user_obj.username).child(drive_obj.id).delete(token)
     print("Object deleted successfully")
