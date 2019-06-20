@@ -1,0 +1,4 @@
+The following softwares/frameworks are required to run this project:
+  - Python 3.6
+  - Django 2.0.2
+  - djangorestframework 3.9.4
